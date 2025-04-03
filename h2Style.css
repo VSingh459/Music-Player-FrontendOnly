@@ -1,0 +1,715 @@
+body{
+	background-color: #0c1027;
+}
+
+main{
+	width: 60vw;
+}
+
+/*Header Stuff*/
+
+@media screen and (max-width: 950px){
+
+	header p{
+		margin-left: 5% !important;
+
+	}
+
+	#pSearch{
+		margin-left: 5% !important;
+	}
+
+	.search-container input{
+		width: 80% !important;
+	}	
+
+}
+
+@media screen and (max-width: 768px){
+	header p{
+		font-size: 1.5rem !important;
+	}
+
+	#pSearch{
+		margin-left: 0px !important;
+	}
+
+	.search-container input{
+		width: 60% !important;
+	}	
+}
+
+@media screen and (max-width: 572px){
+	header p{
+		margin-left: 0px !important;
+	}
+
+}
+
+header{
+	width: 100vw;
+	height: 20vh;
+}
+
+.logo{
+	width: 80px;
+	height: 80px;
+}
+
+header img{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin-left: 3%;
+	margin-top: 1%;
+}
+
+header p{
+	display: inline-block;
+	position: relative;
+	top: -20%;
+	margin: 0px 0px 0px 10%;
+	font-size: 2rem;
+	color: white;
+}
+
+#pSearch{
+	display: inline-block;
+	position: relative;
+	width: 30vw;
+	height: 3vh;
+	margin-left: 20%;
+	top: -20%;
+}
+
+.search-container {
+    /*display: inline-block;*/
+    background-color: #fff;
+    border-radius: 1em;
+    padding: 1.5vh 1.5vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 100%;
+}
+
+.search-container i {
+    color: #333;
+    font-size: 1rem;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 0px;
+    font-size: 1rem;
+    width: 78%;
+    margin-right: 8%;
+    min-width: 0;
+}
+
+.search-container input::placeholder {
+    color: #888;
+}
+
+
+/* Lennon Legend Music Playing */
+
+@media screen and (max-width: 768px) {
+    #lennonLegend {
+        flex-direction: row !important;
+        height: auto !important;
+        gap: 20px !important;
+        align-items: flex-start !important;
+    }
+
+     .lennon-cont{
+    	display: none !important;
+    }
+
+    #volume-cont{
+    	left: 100px !important;
+    }
+
+    
+}
+
+
+
+#lennonLegend{
+	width: 100vw;
+	height: 150px;
+	display: flex;
+	position: fixed;
+	justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #282828;
+    bottom: 0px;
+    box-sizing: border-box;
+    z-index: 2;
+    gap: 140px;
+}
+
+.lennon-cont{
+	display: flex;
+	width: 25%;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	position: relative;
+	left: 6%;
+}
+
+.image-cont img{
+	width: 120px;
+	height: 120px;
+	margin-bottom: 15px;
+}
+
+.details h3{
+	color: white;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	font-size: 1em;
+}
+
+.details p{
+	color: #5b5b5b;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.details{
+	flex-grow: 1;
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+.heart{
+	display: flex;
+	gap: 10px;  
+}
+
+.heart i{
+	color: white;
+	margin-bottom: 90px;
+}
+
+.faded {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, white 50%, rgba(0, 0, 0, 0) 90%);
+   background-clip: text;
+    color: transparent;
+    transition: background-position 1s ease-in-out;
+}
+
+.faded:hover {
+    background-position: 100%;
+}
+
+/* HEllish*/
+
+#music-cont{
+	display: flex;
+	width: 25%;
+	height: 120px;
+	position: relative;
+}
+
+
+.music-player {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; /* Slight gap between controls and slider */
+    width: 100%;
+    /*flex-wrap: wrap; *//* Allows wrapping of controls on small screens */
+}
+
+.controls i{
+	color: white;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.current-time, .total-time {
+    font-size: 14px;
+    margin: 0 10px;
+    color: white;
+}
+
+.slider {
+    appearance: none; /* Resets to the bare appearance */
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, green 30%, grey 30%);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/*  Problem Below*/
+
+#volume-cont{
+	width: 20%;
+	display: flex;
+	height: 120px;
+	position: relative;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Optional: space between the items */
+    width: 100%; /* Makes sure it adapts to the container's width */
+}
+
+.volume-control i {
+    font-size: 24px; /* Adjust icon size */
+    cursor: pointer; /* Makes icons clickable */
+    color: white;
+}
+
+.volume-slider {
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, green 50%, grey 50%);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px; /* Optional: space on sides */
+}
+
+
+
+/* ColdPlay Stuff ---- Main Photo*/
+
+@media screen and (max-width: 1200px){
+	.folo{
+		margin-left: 10% !important;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.folo{
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 768px){
+	#coldplay{
+		left: 1% !important;
+	}
+
+	.inL{
+		top: 0% !important;
+	}
+
+	.inL h2{
+		top: -40% !important;
+	}
+
+	.cc{
+		top: -7% !important;
+	}
+
+	.pp{
+		top: -8% !important;
+	}
+
+	.fotor{
+		top: 0% !important;
+	}
+
+	.laster{
+		top: 2% !important;
+	}
+}
+
+@media screen and (max-width: 520px)
+{
+	.fotor p{
+		display: none !important;
+	}
+
+	.laster{
+		display: none !important;
+	}
+}
+
+#coldplay{
+	display: flex;
+	position: relative;
+	width: 55vw;
+	height: 50vh;
+	left: 10%;
+	background-color: #141b41;
+}
+
+
+.photo {
+	position: relative;
+    width: 45%;;
+    height: 100%;
+   
+    background-image: url(Images/Cold.jpg);
+   
+    background-size: cover;
+    background-position: center;
+
+      mask-image: 
+                linear-gradient(to bottom, black 62%, transparent 126%),
+                radial-gradient(circle at top, transparent 75%, black 88%);
+            mask-composite: subtract;
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+            mask-position: bottom;
+}
+
+.coldInfo{
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+
+.inL{
+	position: relative;
+	top: 10%;
+	width: 100%;
+	height: 35px;
+}
+
+.inL h2{
+	display: inline-block;
+	position: relative;
+	color: white;
+	top: 10%;
+	left: 7%;
+	font-family: sans-serif;
+	width: 100px;
+	height: 90%;
+}
+
+.folo{
+	color: #4e5370;
+	position: relative;
+	display: inline-block;
+	margin-left: 40%;
+
+}
+
+.cc{
+	position: relative;
+	color: #4e5370;
+	top: 10%;
+	left: 7%;
+	font-family: sans-serif;
+	font-size: 0.8rem;
+}
+
+.pp{
+	color: #4e5370;
+	font-size: 0.6rem;
+	position: relative;
+	top: 7%;
+	left: 7%;
+	font-weight: bolder;
+}
+
+/*Button Engineering*/
+
+.fotor{
+	position: relative;
+	top: 15%;
+	left: 5%;
+	width: 100%;
+	height: 35px;
+
+}
+
+.play-button {
+            display: inline-block;
+            padding: 0px 0px;
+            font-size: 16px;
+            font-weight: lighter;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            background: linear-gradient(to right, #4c29b6, #a640d5);
+            border-radius: 0px;
+            border: none;
+            width: 40%;
+            height: 100%;
+        }
+
+.fotor p{
+	display: inline-block;
+	color: #8a8ea0;
+	margin-left: 30%;
+	font-family: sans-serif;
+	font-size: 0.8rem;
+}
+
+.laster{
+	position: relative;
+	top: 12%;
+	left: 7%;
+	color: #a5a9b7;
+	font-size: 0.8rem;
+}
+
+/*Songs Songs Songs Songs*/
+
+@media screen and (max-width: 540px){
+	.mer{
+		font-size: 0.6rem !important;
+	}
+}
+
+@media screen and (max-width: 768px){
+	#Songs{
+		left: 1% !important;
+	}
+}
+
+#Songs{
+	display: flex;
+	flex-direction: column;
+	width: 55vw;
+	height: 70vh;
+	position: relative;
+	left: 10%;
+	top: 50px;
+	gap: 10px;
+}
+
+.s-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 10%;
+	background-color: #1a1e33;
+}
+
+.pC{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	height: 100%;
+	gap: 5px;
+}
+
+.pC span{
+	color: #21b7d8;
+	margin-top: 10px;
+	font-size: 0.9rem;
+}
+
+.ider{
+	color: #556171;
+	position: relative;
+	top: -5px;
+	left: 2px;
+	font-size: 0.9rem;
+}
+
+.det{
+	font-family: sans-serif;
+}
+
+.mer{
+	color: white;
+	position: relative;
+	font-size: 0.7rem;
+	top: -30%;
+}
+
+.vn{
+	position: relative;
+	color: #545868;
+	font-size: 0.6rem;
+	top: -25px;
+}
+
+.iCont i{
+	color: #556171;
+	margin-top: 12px;
+	margin-right: 40px;
+}
+
+.iCont i:last-child {
+            margin-right: 5px;
+}
+
+/*Aside Code Code Code Aside*/
+
+@media screen and (max-width: 768px){
+
+	.va{
+		display: none !important;
+	}
+
+}
+
+aside{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: -720px;
+	left: 65%;
+	width: 20%;
+	height: 50vh;
+
+}
+
+#headAA{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.sa{
+	position: relative;
+	color: white;
+}
+
+
+.va{
+	color: #7e808d;
+	font-size: 0.9rem;
+	position: relative;
+	top: 15%;
+}
+
+.m-container{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 70px;
+	gap: 10%;
+}
+
+.nc{
+	font-family: sans-serif;
+}
+
+.nc h6{
+	color: white;
+	position: relative;
+	left: 2%;
+	top: -25%;
+}
+
+.nc p{
+	color: #5b5e6d;
+	font-size: 0.8rem;
+	position: relative;
+	left: 2%;
+	top: -40%;
+}
+
+
+.dotter i {
+	color: #7e808d;
+	left: 5%;
+	top: -5%;
+}
+
+.dotter p {
+	color: #7e808d;
+	font-size: 0.8rem;
+	position: relative;
+	left: -10%;
+	top: -20%;
+}
+
+.sm-cont{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 60px;
+	justify-content: space-between;
+}
+
+.tog{
+	display: flex;
+	flex-direction: row;
+	width: 70%;
+	height: 100%;
+	gap: 5px;
+}
+
+.tog p{
+	display: inline-block;
+	color: #7e808d;
+	position: relative;
+	top: -25%;
+}
+
+.tog span{
+	color: #1faccd;
+	font-size: 0.9rem;
+	margin-top: 7%;
+}
+
+.ME h6{
+	color: white;
+	position: relative;
+	font-family: sans-serif;
+	left: 10%;
+	top: -40%;
+}
+
+.ME p{
+	color:  #7e808d;
+	position: relative;
+	font-size: 0.7rem;
+	font-family: sans-serif;
+	left: 10%;
+	top: -85%;
+}
+
+.hee i{
+	color: #7e808d;
+	margin-left: -200%;
+	margin-top: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
